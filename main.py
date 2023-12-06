@@ -1,4 +1,4 @@
-import pygame
+import torch
 from NGRFunctions import *
 
 
