@@ -22,4 +22,4 @@ while running:
     screen.fill("purple")
 
 if __name__ == "__main__":
-    print(f"Complete")
+    logger.info("Program Complete")
