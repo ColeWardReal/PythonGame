@@ -57,6 +57,7 @@ class ColoredLogger(logging.Logger):
         self.addHandler(console)
 
         # create file handler
+        # fix later, output is '1mFNAME.py'
         fh = logging.FileHandler("example.log")
         fh.setFormatter(color_formatter)
         self.addHandler(fh)
@@ -64,10 +65,10 @@ class ColoredLogger(logging.Logger):
         return
 
 
-def format(self, record):
-    log_fmt = self.FORMATS.get(record.levelno)
-    formatter = logging.Formatter(log_fmt)
-    return formatter.format(record)
+# def format(self, record):
+#     log_fmt = self.FORMATS.get(record.levelno)
+#     formatter = logging.Formatter(log_fmt)
+#     return formatter.format(record)
 
 
 logging.setLoggerClass(ColoredLogger)
